@@ -1,5 +1,8 @@
 image: gitlab.nyrox.tech:5005/nyrox/shippy:latest
 
+services:
+  - docker:dind
+
 build:
   stage: build
   script:
