@@ -7,8 +7,5 @@ build:
   stage: build
   script:
     - shippy build --tag latest
-
-publish:
-  stage: deploy
-  script:
     - shippy publish latest -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+
