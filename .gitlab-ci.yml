@@ -1,4 +1,4 @@
-image: gitlab.nyrox.tech:5005/nyrox/shippy:latest
+image: gitlab.nyrox.tech:5005/nyrox/longa:latest
 
 services:
   - docker:dind
@@ -6,6 +6,6 @@ services:
 build:
   stage: build
   script:
-    - shippy build --tag latest
-    - shippy publish latest -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - longa build --tag latest
+    - longa publish latest -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
 
