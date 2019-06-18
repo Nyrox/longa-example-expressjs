@@ -11,7 +11,7 @@
 		"host": "gitlab.nyrox.tech:5005"
 	},
 	"project": {
-		"name": "longa-expressjs-example",
-		"group": "nyrox"
+		"name": "expressjs-example",
+		"group": "longa"
 	}
 }
