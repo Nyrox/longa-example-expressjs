@@ -6,6 +6,6 @@ services:
 build:
   stage: build
   script:
-    - longa build --tag latest
+    - longa build --image $CI_COMMIT_REF_SLUG --tag latest
     - longa publish latest -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
 
