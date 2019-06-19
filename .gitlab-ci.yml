@@ -8,6 +8,6 @@ build:
   script:
     - longa build --image $CI_COMMIT_REF_SLUG --tag latest
     - longa publish --image $CI_COMMIT_REF_SLUG --tag latest -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
-    - longa deploy --host "$LONGA_STAGING_HOST" --tag latest -u $LONGA_STAGING_USER
+    - longa deploy --host "$LONGA_STAGING_HOST" --image $CI_COMMIT_REF_SLUG --tag latest -u $LONGA_STAGING_USER
   variables:
     DEPLOY_KEY: $LONGA_STAGING_PRIVKEY
